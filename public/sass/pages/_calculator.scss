@@ -66,7 +66,6 @@
 
             .c-left {
                 .c-keyboard-calc {
-                    // @include flex-space-around;
                     @include flex-direction-row;
                 }
         
@@ -95,7 +94,6 @@
             cursor: pointer;
             font-weight: bold;
             outline: none;
-            //padding: .50em .75em;
             width: 80px;
             height: 80px;
             margin: 4px 5px;
@@ -147,7 +145,6 @@
         }
 
         .equal {
-            //padding: 2.8em .75em;
             height: 250px;
             background: $button-color-equal;
             border: $button-color-border-equal;
