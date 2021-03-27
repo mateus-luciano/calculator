@@ -85,6 +85,10 @@ body {
   height: 80px;
   border-radius: .6em;
   padding: .4em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #aaa;
   margin-bottom: 1.4em;
   position: relative;
