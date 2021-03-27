@@ -1,27 +1,27 @@
 // ==========================================================================
-// Colors
+// Calculator
 // ==========================================================================
 
-$background-color: #f0f0f7;
+$background-color                 : #f0f0f7;
 
 $button-color                     : #8bc8fa;
 $button-color-dark                : darken($button-color, 10%);
 $button-color-border              : rgba(darken($button-color, 60%), .45);
 $button-color-text                : darken($button-color, 85%);
 
-$button-color-equal                     :#aaa;
-$button-color-dark-equal                 : darken($button-color-equal, 10%);
-$button-color-border-equal               : rgba(darken($button-color-equal, 60%), .6);
-$button-color-text-equal                 : darken($button-color-equal, 85%);
+$button-color-equal               :#aaa;
+$button-color-dark-equal          : darken($button-color-equal, 10%);
+$button-color-border-equal        : rgba(darken($button-color-equal, 60%), .6);
+$button-color-text-equal          : darken($button-color-equal, 85%);
 
-$button-color-clean                     :rgb(255, 95, 95);
-$button-color-dark-clean                : darken($button-color-clean, 10%);
-$button-color-border-clean              : rgba(darken($button-color-clean, 60%), .6);
-$button-color-text-clean                : darken($button-color-clean, 85%);
+$button-color-clean               :rgb(255, 95, 95);
+$button-color-dark-clean          : darken($button-color-clean, 10%);
+$button-color-border-clean        : rgba(darken($button-color-clean, 60%), .6);
+$button-color-text-clean          : darken($button-color-clean, 85%);
 
-$calculator-color                     :rgb(34, 34, 34);
-$calculator-color-border              : rgba(darken($calculator-color , 60%), .6);
-$calculator-color-text               : darken($calculator-color , 85%);
+$calculator-color                 :rgb(34, 34, 34);
+$calculator-color-border          : rgba(darken($calculator-color , 60%), .6);
+$calculator-color-text            : darken($calculator-color , 85%);
 
 
 $font-size-default: 16px;
