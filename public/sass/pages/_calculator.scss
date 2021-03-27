@@ -1,0 +1,203 @@
+#calculator {
+    @include flex-center;
+    min-width: 100vw;
+    min-height: 100vh;
+    line-height: 1.5;
+
+    @include breakpoint(small-only) {}
+    .container {
+        @include flex-center;
+        @include flex-direction-column;
+        width: 400px;
+        height: 620px;
+        // background: #000;
+        border-radius: .9em;
+
+        .c-display {
+            @include flex-center;
+            width: 340px;
+            height: 80px;
+            border-radius: .6em;
+            padding: .4em;
+            background: #aaa;
+            margin-bottom: 1.4em;
+            position: relative;
+
+            p {
+                font-size: 3.2em
+            }
+
+            &::before {
+                text-transform: uppercase;
+                transform-style: preserve-3d;
+                border-radius: inherit;
+                transition: all 150ms $transition-function-ease-out-back;
+                box-shadow: 
+                0 0 0 2px $button-color-border-equal,
+                0 .6em 0 0 rgba($button-color-equal, .6);
+                content: '';
+                height:  100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform: translate3d(.6em, .75em, -1em);
+                transition: all 150ms $transition-function-ease-out-back;
+                width: 100%;
+            }
+        }
+        .c-keyboard {
+            @include flex-direction-row;
+
+            .c-left {
+                .c-keyboard-calc {
+                    // @include flex-space-around;
+                    @include flex-direction-row;
+                }
+        
+                .c-keyboard-numeric {
+                    @include flex-direction-column;
+        
+                    .c-row {
+                        @include flex-direction-row;
+                    }
+                }
+            }
+    
+            .c-right {
+                .c-keyboard-functions {
+                    @include flex-direction-column;
+                }
+            }
+        }
+
+        .c-button {
+            background: $button-color;
+            border-radius: .6em;
+            border: 0;
+            border: 3px solid $button-color-border;
+            color: $button-color-text;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+            //padding: .50em .75em;
+            width: 80px;
+            height: 80px;
+            margin: 4px 5px;
+            font-size: 2em;
+            position: relative;
+            text-transform: uppercase;
+            user-select: none;
+            transform-style: preserve-3d;
+            transition: all 150ms $transition-function-ease-out-back;
+        
+            &::before {
+                background: $button-color-dark;
+                border-radius: inherit;
+                box-shadow: 
+                0 0 0 2px $button-color-border,
+                0 .4em 0 0 rgba($button-color, .6);
+                content: '';
+                height:  100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform: translate3d(.2em, .5em, -.75em);
+                transition: all 150ms $transition-function-ease-out-back;
+                width: 100%;
+            }
+        
+            &:hover {
+                transform: translate(0, .25em);
+        
+                &::before {
+                    box-shadow: 
+                    0 0 0 2px $button-color-border,
+                    0 .45em 0 0 rgba($button-color, .8);
+                    transform: translate3d(.1em, .3em, -1em);
+                }
+            }
+        
+            &:active {
+                background: $button-color;
+                transform: translate(0, .75em);
+        
+                &::before {
+                    box-shadow: 
+                    0 0 0 3px $button-color-border,
+                    0 0 $button-color;
+                    transform: translate3d(0, 0, -.5em);
+                }
+            }
+        }
+
+        .equal {
+            //padding: 2.8em .75em;
+            height: 250px;
+            background: $button-color-equal;
+            border: $button-color-border-equal;
+            color: $button-color-text-equal;
+            &::before {
+                background: $button-color-dark-equal;
+                box-shadow: 
+                0 0 0 2px $button-color-border-equal,
+                0 .6em 0 0 rgba($button-color-equal, .6);
+            }
+            &:hover {
+                &::before {
+                    box-shadow: 
+                    0 0 0 2px $button-color-border-equal,
+                    0 .45em 0 0 rgba($button-color-equal, .8);
+                }
+            }
+            &:active {
+                background: $button-color-equal;
+                &::before {
+                    box-shadow: 
+                    0 0 0 3px $button-color-border-equal,
+                    0 0 $button-color-equal;
+                }
+            }
+        }
+
+        .clean {
+            background: $button-color-clean;
+            border: $button-color-border-clean;
+            color: $button-color-text-clean;
+            &::before {
+                background: $button-color-dark-clean;
+                box-shadow: 
+                0 0 0 2px $button-color-border-clean,
+                0 .6em 0 0 rgba($button-color-clean, .6);
+            }
+            &:hover {
+                &::before {
+                    box-shadow: 
+                    0 0 0 2px $button-color-border-clean,
+                    0 .45em 0 0 rgba($button-color-clean, .8);
+                }
+            }
+            &:active {
+                background: $button-color-clean;
+                &::before {
+                    box-shadow: 
+                    0 0 0 3px $button-color-border-clean,
+                    0 0 $button-color-clean;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
