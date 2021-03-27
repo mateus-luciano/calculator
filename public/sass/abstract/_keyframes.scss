@@ -1,0 +1,50 @@
+@keyframes go-back {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes aaa {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+
+  // animation: mymove 5s infinite;
+
+  @keyframes teste2 {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
+  @keyframes teste1 {
+    0%   {top: 0px; background: red; width: 100px;}
+    100% {top: 200px; background: yellow; width: 300px;}
+  }
+
+  @keyframes testee {
+    0% {
+      width: 60%;
+      height: 60%;
+      font-size: 1.2em;
+    }
+
+    100% {
+      width: 0%;
+      height: 0%;
+      font-size: 0;
+    }
+  }
