@@ -3,13 +3,14 @@
 // ==========================================================================
 
 $background-color                 : #f0f0f7;
+$button-border-default            :rgb(78, 78, 78);
 
 $button-color                     : #8bc8fa;
 $button-color-dark                : darken($button-color, 10%);
 $button-color-border              : rgba(darken($button-color, 60%), .45);
 $button-color-text                : darken($button-color, 85%);
 
-$button-color-equal               :#aaa;
+$button-color-equal               :rgb(159, 226, 168);
 $button-color-dark-equal          : darken($button-color-equal, 10%);
 $button-color-border-equal        : rgba(darken($button-color-equal, 60%), .6);
 $button-color-text-equal          : darken($button-color-equal, 85%);
@@ -19,10 +20,14 @@ $button-color-dark-clean          : darken($button-color-clean, 10%);
 $button-color-border-clean        : rgba(darken($button-color-clean, 60%), .6);
 $button-color-text-clean          : darken($button-color-clean, 85%);
 
-$calculator-color                 :rgb(34, 34, 34);
-$calculator-color-border          : rgba(darken($calculator-color , 60%), .6);
-$calculator-color-text            : darken($calculator-color , 85%);
+$calculator-color                 :rgb(146, 146, 146);
+// $calculator-color                 :rgb(34, 34, 34);
+$calculator-color-border          : rgba(darken($calculator-color, 60%), .6);
+$calculator-color-text            : darken($calculator-color, 85%);
 
+$display-color                    :#aaa;
+$display-color-border             : rgba(darken($display-color, 60%), .6);
+$display-color-text               : darken($display-color, 90%);
 
 $font-size-default: 16px;
 $transition-function-ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
