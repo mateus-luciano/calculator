@@ -31,7 +31,6 @@ Moreover, recommend use the [VSCode](https://code.visualstudio.com/) terminal.
 # Clone this repository
 $ git clone https://github.com/teeusdm/calculator.git
 
-
 # Access the repository on your terminal.
 $ cd calculator
 
