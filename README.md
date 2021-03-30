@@ -41,6 +41,7 @@ $ yarn install
 $ yarn dev
 
 # Access http://localhost:8080 on your browser
+```
 <hr>
 
 Made by [Mateus Luciano](https://github.com/teeusdm)
