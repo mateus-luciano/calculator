@@ -12,7 +12,7 @@
 - HTML<br>
 - CSS<br>
 - SASS<br>
-- Javascript ES6+<br>
+- JavaScript ES6+<br>
 - Webpack<br>
 - Babel<br>
 - Yarn<br>
