@@ -24,7 +24,7 @@
 
 Before start the project, install [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/) in your machine.
 Moreover, recommend use the [VSCode](https://code.visualstudio.com/) terminal.
-
+<hr>
 
 ```bash
 # Clone this repository
@@ -41,6 +41,6 @@ $ yarn install
 $ yarn dev
 
 # Access http://localhost:8080 on your browser
+<hr>
 
-
-Made by [Mateus Luciano(https://github.com/teeusdm)
+Made by [Mateus Luciano](https://github.com/teeusdm)
