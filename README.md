@@ -1,4 +1,5 @@
 <h1 align="center">Calculator</h1>
+<hr>
 
 <p>Simple calculator created with JavaScript, where you can do calculations like sums, subtractions, divisions and multiplications</p>
 <hr>
