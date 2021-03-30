@@ -1,5 +1,5 @@
 // ==========================================================================
-// Calculator
+// Variables
 // ==========================================================================
 
 $background-color                 : #f0f0f7;
@@ -21,13 +21,11 @@ $button-color-border-clean        : rgba(darken($button-color-clean, 60%), .6);
 $button-color-text-clean          : darken($button-color-clean, 85%);
 
 $button-color-operation           :#bee2ff;
-// $button-color-operation           :#8bc8fa;
 $button-color-dark-operation      : darken($button-color-operation, 10%);
 $button-color-border-operation    : rgba(darken($button-color-operation, 60%), .6);
 $button-color-text-operation      : darken($button-color-operation, 85%);
 
 $calculator-color                 :rgb(117, 117, 117);
-// $calculator-color                 :rgb(34, 34, 34);
 $calculator-color-border          : rgba(darken($calculator-color, 60%), .6);
 $calculator-color-text            : darken($calculator-color, 85%);
 
