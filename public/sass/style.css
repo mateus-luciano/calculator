@@ -46,7 +46,7 @@ body {
           flex-direction: column;
   width: 400px;
   height: 620px;
-  background: #929292;
+  background: #757575;
   color: black;
   border-radius: .9em;
   position: relative;
@@ -62,8 +62,8 @@ body {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: inherit;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6), 1.8em 2.2em 0 0 rgba(146, 146, 146, 0.5);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6), 1.8em 2.2em 0 0 rgba(146, 146, 146, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6), 1.8em 2.2em 0 0 rgba(117, 117, 117, 0.5);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6), 1.8em 2.2em 0 0 rgba(117, 117, 117, 0.5);
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
 }
@@ -169,10 +169,10 @@ body {
 }
 
 #calculator .container .c-button {
-  background: #8bc8fa;
+  background: #c5c5c5;
   border-radius: .6em;
   border: 0;
-  border: 3px solid rgba(3, 45, 80, 0.45);
+  border: 3px solid rgba(44, 44, 44, 0.45);
   color: black;
   cursor: pointer;
   font-weight: bold;
@@ -194,7 +194,7 @@ body {
 }
 
 #calculator .container .c-button::before {
-  background: #5ab1f8;
+  background: #acacac;
   border-radius: inherit;
   -webkit-box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
           box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
@@ -223,17 +223,46 @@ body {
 }
 
 #calculator .container .c-button:active {
-  background: #8bc8fa;
+  background: #c5c5c5;
   -webkit-transform: translate(0, 0.5em);
           transform: translate(0, 0.5em);
-  color: #5ab1f8;
+  color: #acacac;
 }
 
 #calculator .container .c-button:active::before {
-  -webkit-box-shadow: 0 0 0 3px rgba(3, 45, 80, 0.45), 0 0 #8bc8fa;
-          box-shadow: 0 0 0 3px rgba(3, 45, 80, 0.45), 0 0 #8bc8fa;
+  -webkit-box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.45), 0 0 #c5c5c5;
+          box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.45), 0 0 #c5c5c5;
   -webkit-transform: translate3d(0, 0, -0.5em);
           transform: translate3d(0, 0, -0.5em);
+}
+
+#calculator .container .operation {
+  background: #bee2ff;
+  border: 3px solid rgba(0, 77, 139, 0.6);
+  color: #00060c;
+}
+
+#calculator .container .operation::before {
+  background: #8bcbff;
+  -webkit-box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
+          box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
+}
+
+#calculator .container .operation:hover::before {
+  -webkit-box-shadow: 0.25em 0.17em 2px #4e4e4e;
+          box-shadow: 0.25em 0.17em 2px #4e4e4e;
+}
+
+#calculator .container .operation:active {
+  background: #bee2ff;
+  -webkit-transform: translate(0, 0.5em);
+          transform: translate(0, 0.5em);
+  color: #8bcbff;
+}
+
+#calculator .container .operation:active::before {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 77, 139, 0.6), 0 0 #bee2ff;
+          box-shadow: 0 0 0 3px rgba(0, 77, 139, 0.6), 0 0 #bee2ff;
 }
 
 #calculator .container .equal {
@@ -276,8 +305,8 @@ body {
 #calculator .container .clean::before,
 #calculator .container .delete::before {
   background: #ff2c2c;
-  -webkit-box-shadow: 0.4em 0.2em 0 2px rgba(44, 0, 0, 0.6);
-          box-shadow: 0.4em 0.2em 0 2px rgba(44, 0, 0, 0.6);
+  -webkit-box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
+          box-shadow: 0.4em 0.2em 0 2px #4e4e4e;
 }
 
 #calculator .container .clean:hover::before,
