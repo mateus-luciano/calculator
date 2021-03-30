@@ -35,5 +35,5 @@ $display-color                    :#aaa;
 $display-color-border             : rgba(darken($display-color, 60%), .6);
 $display-color-text               : darken($display-color, 90%);
 
-$font-size-default: 16px;
+$font-size-default                : 16px;
 $transition-function-ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
