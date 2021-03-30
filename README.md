@@ -1,5 +1,4 @@
 <h1 align="center">Calculator</h1>
-<hr>
 
 <p>Simple calculator created with JavaScript, where you can do calculations like sums, subtractions, divisions and multiplications</p>
 <hr>
@@ -7,7 +6,6 @@
 <p align="center">
   <img alt="Calculator gif" title="Calculator gif" src="./public/images/2021-03-30 08-5-1617106105361.gif" width="90%">
 </p>
-<hr>
 
 ## Technologies and tools used:
 
@@ -43,5 +41,3 @@ $ yarn dev
 # Access http://localhost:8080 on your browser
 ```
 <hr>
-
-Made by [Mateus Luciano](https://github.com/teeusdm)
