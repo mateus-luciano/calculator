@@ -2,9 +2,6 @@
 // Variables
 // ==========================================================================
 
-$background-color                 : #f0f0f7;
-$button-border-default            :rgb(78, 78, 78);
-
 $button-color                     : rgb(197, 197, 197);
 $button-color-dark                : darken($button-color, 10%);
 $button-color-border              : rgba(darken($button-color, 60%), .45);
@@ -33,5 +30,7 @@ $display-color                    :#aaa;
 $display-color-border             : rgba(darken($display-color, 60%), .6);
 $display-color-text               : darken($display-color, 90%);
 
+$background-color                 : #f0f0f7;
+$button-border-default            :rgb(78, 78, 78);
 $font-size-default                : 16px;
 $transition-function-ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
