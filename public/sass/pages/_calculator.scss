@@ -30,7 +30,6 @@
 
         .c-display {
             @include flex-direction-column;
-            // @include flex-center;
             @include flex-align-end;
             width: 340px;
             height: 84px;
@@ -98,7 +97,6 @@
                 border-radius: inherit;
                 box-shadow: 
                 .4em .2em 0 2px $button-border-default;
-                // 0 .4em 0 0 rgba($button-color, .6)
                 content: '';
                 height:  100%;
                 left: 0;
@@ -115,7 +113,6 @@
                 &::before {
                     box-shadow: 
                     .25em .17em 2px $button-border-default;
-                    // 0 .25em 0 0 rgba($button-color, .8)
                     transform: translate3d(.1em, .3em, -1em);
                 }
             }
@@ -142,13 +139,11 @@
                 background: $button-color-dark-operation;
                 box-shadow: 
                 .4em .2em 0 2px $button-border-default,
-                // 0 .4em 0 0 rgba($button-color-clean, .8);
             }
             &:hover {
                 &::before {
                     box-shadow: 
                     .25em .17em 2px $button-border-default,
-                    // 0 .25em 0 0 rgba($button-color-clean, .8);
                 }
             }
             &:active {
@@ -172,13 +167,11 @@
                 background: $button-color-dark-equal;
                 box-shadow: 
                 .4em .2em 0 2px $button-border-default,
-                // 0 .4em 0 0 rgba($button-color-equal, .6);
             }
             &:hover {
                 &::before {
                     box-shadow: 
                     .25em .17em 2px $button-border-default,
-                    // 0 .25em 0 0 rgba($button-color-equal, .8);
                 }
             }
             &:active {
@@ -202,13 +195,11 @@
                 background: $button-color-dark-clean;
                 box-shadow: 
                 .4em .2em 0 2px $button-border-default,
-                // 0 .4em 0 0 rgba($button-color-clean, .8);
             }
             &:hover {
                 &::before {
                     box-shadow: 
                     .25em .17em 2px $button-border-default,
-                    // 0 .25em 0 0 rgba($button-color-clean, .8);
                 }
             }
             &:active {
