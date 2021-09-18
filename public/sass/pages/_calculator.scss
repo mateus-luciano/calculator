@@ -1,231 +1,229 @@
-#calculator {
-    @include flex-center;
-    min-width: 100vw;
-    min-height: 100vh;
+.calculator {
+  @include flex-center;
+  min-width: 100vw;
+  min-height: 100vh;
 
-    .container {
-        @include flex-center;
-        @include flex-direction-column;
-        width: 400px;
-        height: 620px;
-        background: $calculator-color;
-        color: $calculator-color-text;
-        border-radius: .9em;
-        position: relative;
+  .container {
+    @include flex-center;
+    @include flex-direction-column;
+    width: 400px;
+    height: 620px;
+    background: $calculator-color;
+    color: $calculator-color-text;
+    border-radius: .9em;
+    position: relative;
+
+    &::before {
+      width: 102%;
+      height:  101%;
+      content: '';
+      position: absolute;
+      top: -34px;
+      left: -22px;
+      transform-style: preserve-3d;
+      border-radius: inherit;
+      box-shadow:
+      0 0 0 0 $calculator-color-border,
+      1.8em 2.2em 0 0 rgba($calculator-color, .5);
+      transform: rotate(1deg);
+    }
+
+    .c-display {
+      @include flex-direction-column;
+      @include flex-align-end;
+      width: 340px;
+      height: 84px;
+      border-radius: .6em;
+      padding: 0 .8em;
+      user-select: none;
+      background: $display-color;
+      color: $display-color-text;
+      margin-bottom: 1.4em;
+      position: relative;
+
+      .previous-operand {
+        font-size: 1.2em;
+      }
+
+      .current-operand {
+        font-size: 2.6em
+      }
+
+      &::before {
+        width: 100%;
+        height:  100%;
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: -11px;
+        transform-style: preserve-3d;
+        border-radius: inherit;
+        box-shadow:
+        0 0 0 0 $display-color-border,
+        .6em .6em 0 0 rgba($display-color, .6);
+        transform: translate3d(.6em, .75em, -1em);
+      }
+    }
+    .c-keyboard { @include flex-direction-row;
+      .c-left {
+        .c-keyboard-calc { @include flex-direction-row; }
+        .c-keyboard-numeric { @include flex-direction-column;
+          .c-row { @include flex-direction-row; }}}
+      .c-right {
+        .c-keyboard-functions { @include flex-direction-column; }}
+    }
+
+    .c-button {
+      background: $button-color;
+      border-radius: .6em;
+      border: 0;
+      border: 3px solid $button-color-border;
+      color: $button-color-text;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+      width: 80px;
+      height: 80px;
+      margin: 4px 5px;
+      font-size: 2em;
+      position: relative;
+      text-transform: uppercase;
+      user-select: none;
+      transform-style: preserve-3d;
+      transition: all 150ms $transition-function-ease-out-back;
+
+      &::before {
+        background: $button-color-dark;
+        border-radius: inherit;
+        box-shadow:
+        .4em .2em 0 2px $button-border-default;
+        content: '';
+        height:  100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate3d(.2em, .5em, -.75em);
+        transition: all 150ms $transition-function-ease-out-back;
+        width: 100%;
+      }
+
+      &:hover {
+        transform: translate(0, .25em);
 
         &::before {
-            width: 102%;
-            height:  101%;
-            content: '';
-            position: absolute;
-            top: -34px;
-            left: -22px;
-            transform-style: preserve-3d;
-            border-radius: inherit;
-            box-shadow:
-            0 0 0 0 $calculator-color-border,
-            1.8em 2.2em 0 0 rgba($calculator-color, .5);
-            transform: rotate(1deg);
+          box-shadow:
+          .25em .17em 2px $button-border-default;
+          transform: translate3d(.1em, .3em, -1em);
         }
+      }
 
-        .c-display {
-            @include flex-direction-column;
-            @include flex-align-end;
-            width: 340px;
-            height: 84px;
-            border-radius: .6em;
-            padding: 0 .8em;
-            user-select: none;
-            background: $display-color;
-            color: $display-color-text;
-            margin-bottom: 1.4em;
-            position: relative;
+      &:active {
+        background: $button-color;
+        transform: translate(0, .5em);
+        color: $button-color-dark;
 
-            .previous-operand {
-                font-size: 1.2em;
-            }
-
-            .current-operand {
-                font-size: 2.6em
-            }
-
-            &::before {
-                width: 100%;
-                height:  100%;
-                content: '';
-                position: absolute;
-                top: -12px;
-                left: -11px;
-                transform-style: preserve-3d;
-                border-radius: inherit;
-                box-shadow: 
-                0 0 0 0 $display-color-border,
-                .6em .6em 0 0 rgba($display-color, .6);
-                transform: translate3d(.6em, .75em, -1em);
-            }
+        &::before {
+          box-shadow:
+          0 0 0 3px $button-color-border,
+          0 0 $button-color;
+          transform: translate3d(0, 0, -.5em);
         }
-        .c-keyboard { @include flex-direction-row;
-            .c-left {
-                .c-keyboard-calc { @include flex-direction-row; }
-                .c-keyboard-numeric { @include flex-direction-column;
-                    .c-row { @include flex-direction-row; }}}
-            .c-right {
-                .c-keyboard-functions { @include flex-direction-column; }}
-        }
-
-        .c-button {
-            background: $button-color;
-            border-radius: .6em;
-            border: 0;
-            border: 3px solid $button-color-border;
-            color: $button-color-text;
-            cursor: pointer;
-            font-weight: bold;
-            outline: none;
-            width: 80px;
-            height: 80px;
-            margin: 4px 5px;
-            font-size: 2em;
-            position: relative;
-            text-transform: uppercase;
-            user-select: none;
-            transform-style: preserve-3d;
-            transition: all 150ms $transition-function-ease-out-back;
-        
-            &::before {
-                background: $button-color-dark;
-                border-radius: inherit;
-                box-shadow: 
-                .4em .2em 0 2px $button-border-default;
-                content: '';
-                height:  100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                transform: translate3d(.2em, .5em, -.75em);
-                transition: all 150ms $transition-function-ease-out-back;
-                width: 100%;
-            }
-        
-            &:hover {
-                transform: translate(0, .25em);
-        
-                &::before {
-                    box-shadow: 
-                    .25em .17em 2px $button-border-default;
-                    transform: translate3d(.1em, .3em, -1em);
-                }
-            }
-        
-            &:active {
-                background: $button-color;
-                transform: translate(0, .5em);
-                color: $button-color-dark;
-
-                &::before {
-                    box-shadow: 
-                    0 0 0 3px $button-color-border,
-                    0 0 $button-color;
-                    transform: translate3d(0, 0, -.5em);
-                }
-            }
-        }
-
-        .operation {
-            background: $button-color-operation;
-            border: 3px solid $button-color-border-operation;
-            color: $button-color-text-operation;
-            &::before {
-                background: $button-color-dark-operation;
-                box-shadow: 
-                .4em .2em 0 2px $button-border-default,
-            }
-            &:hover {
-                &::before {
-                    box-shadow: 
-                    .25em .17em 2px $button-border-default,
-                }
-            }
-            &:active {
-                background: $button-color-operation;
-                transform: translate(0, .5em);
-                color: $button-color-dark-operation;
-                &::before {
-                    box-shadow: 
-                    0 0 0 3px $button-color-border-operation,
-                    0 0 $button-color-operation;
-                }
-            }
-        }
-
-        .equal {
-            height: 255px;
-            background: $button-color-equal;
-            border: 3px solid $button-color-border-equal;
-            color: $button-color-text-equal;
-            &::before {
-                background: $button-color-dark-equal;
-                box-shadow: 
-                .4em .2em 0 2px $button-border-default,
-            }
-            &:hover {
-                &::before {
-                    box-shadow: 
-                    .25em .17em 2px $button-border-default,
-                }
-            }
-            &:active {
-                background: $button-color-equal;
-                transform: translate(0, .5em);
-                color: $button-color-dark-equal;
-                &::before {
-                    box-shadow: 
-                    0 0 0 3px $button-color-border-equal,
-                    0 0 $button-color-equal;
-                }
-            }
-        }
-
-        .clean,
-        .delete {
-            background: $button-color-clean;
-            border: 3px solid $button-color-border-clean;
-            color: $button-color-text-clean;
-            &::before {
-                background: $button-color-dark-clean;
-                box-shadow: 
-                .4em .2em 0 2px $button-border-default,
-            }
-            &:hover {
-                &::before {
-                    box-shadow: 
-                    .25em .17em 2px $button-border-default,
-                }
-            }
-            &:active {
-                background: $button-color-clean;
-                transform: translate(0, .5em);
-                color: $button-color-dark-clean;
-                &::before {
-                    box-shadow: 
-                    0 0 0 3px $button-color-border-clean,
-                    0 0 $button-color-clean;
-                }
-            }
-        }
+      }
     }
+
+    .operation {
+      background: $button-color-operation;
+      border: 3px solid $button-color-border-operation;
+      color: $button-color-text-operation;
+
+      &::before {
+        background: $button-color-dark-operation;
+        box-shadow:
+        .4em .2em 0 2px $button-border-default,
+      }
+
+      &:hover {
+        &::before {
+          box-shadow:
+          .25em .17em 2px $button-border-default,
+        }
+      }
+
+      &:active {
+        background: $button-color-operation;
+        transform: translate(0, .5em);
+        color: $button-color-dark-operation;
+
+        &::before {
+          box-shadow:
+          0 0 0 3px $button-color-border-operation,
+          0 0 $button-color-operation;
+        }
+      }
+    }
+
+    .equal {
+      height: 255px;
+      background: $button-color-equal;
+      border: 3px solid $button-color-border-equal;
+      color: $button-color-text-equal;
+
+      &::before {
+        background: $button-color-dark-equal;
+        box-shadow:
+        .4em .2em 0 2px $button-border-default,
+      }
+
+      &:hover {
+        &::before {
+          box-shadow:
+          .25em .17em 2px $button-border-default,
+        }
+      }
+
+      &:active {
+        background: $button-color-equal;
+        transform: translate(0, .5em);
+        color: $button-color-dark-equal;
+
+        &::before {
+          box-shadow:
+          0 0 0 3px $button-color-border-equal,
+          0 0 $button-color-equal;
+      }
+      }
+    }
+
+    .clean,
+    .delete {
+      background: $button-color-clean;
+      border: 3px solid $button-color-border-clean;
+      color: $button-color-text-clean;
+
+      &::before {
+        background: $button-color-dark-clean;
+        box-shadow:
+        .4em .2em 0 2px $button-border-default,
+      }
+
+      &:hover {
+        &::before {
+          box-shadow:
+          .25em .17em 2px $button-border-default,
+        }
+      }
+
+      &:active {
+        background: $button-color-clean;
+        transform: translate(0, .5em);
+        color: $button-color-dark-clean;
+
+        &::before {
+          box-shadow:
+          0 0 0 3px $button-color-border-clean,
+          0 0 $button-color-clean;
+        }
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
