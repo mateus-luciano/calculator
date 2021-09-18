@@ -12,7 +12,7 @@ class Calculator {
         this.assignEventClearButton()
         this.assignEventAllDeleteButtons()
     }
- 
+
     assignEventNumberButtons() {
         document.querySelectorAll('.numbers').forEach(button => {
             button.addEventListener('click', event => {
@@ -22,7 +22,7 @@ class Calculator {
             })
         })
     }
-    
+
     assignEventOperationButtons() {
         document.querySelectorAll('.operation').forEach(button => {
             button.addEventListener('click', event => {
@@ -98,11 +98,11 @@ class Calculator {
     }
 
     populateDisplay() {
-        this.currentOperandTextElement.innerHTML = 
+        this.currentOperandTextElement.innerHTML =
         this.getDisplayNumber(this.currentOperand)
-        
+
         if (this.operation != null) {
-            this.previousOperandTextElement.innerHTML = 
+            this.previousOperandTextElement.innerHTML =
             `${this.previousOperand} ${this.operation}`
         } else {
             this.previousOperandTextElement.innerHTM = ''
@@ -123,7 +123,7 @@ class Calculator {
         let computation
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
-        if (isNaN(prev) || isNaN(current)) return 
+        if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
             case '+':
                 computation = prev + current
@@ -145,79 +145,6 @@ class Calculator {
         this.operation = undefined
         this.previousOperand = ''
     }
-
-    
-    
-    // getNumbers(numberString) {
-    //     if (numberString !== '+' && numberString !== '-' && numberString !== '/' && numberString !== '*' && numberString !== ',' && numberString !== '.') {
-    //         const number = Number.parseInt(numberString)
-    //         this.calculate(number, null)
-    //         this.populateDisplay(number)
-    //     } else {
-    //         this.calculate(null, numberString)
-    //         this.populateDisplay(numberString)
-    //     }
-    // }
-
-
-    // calculate(numb, func) {
-    //     const number = [numb, ] 
-    //     const funct = [, func]
-
-    //     // const numbersArray = []
-
-    //     // numbersArray.push(number)
-        
-    //     let result;
-
-    //     // console.log(number[0])
-        
-    //     // let numbersArray = []
-        
-    //     let number1 = number
-    //     let number2 = 0
-
-    //     let numbersArray = []
-
-    //     numbersArray.push(number1)
-
-    //     console.log(numbersArray)
-        
-    //     console.log(number1[0], '1')
-    //     console.log(number2, '2')
-    //     // numbersArray.push(number)
-        
-    //     if (funct[1] == '-' || funct[1] == '+' || funct[1] == '/' || funct[1] == '*') {
-    //         // console.log(numbersArray)
-    //         // console.log('test')
-    //         // console.log(funct[1])
-    //         // number1 = numbersArray[0]
-    //         // numbersArray = []
-    //         // console.log(number1)
-    //         number2 = number
-    //         console.log(number1, '1')
-    //         console.log(number2, '2')
-    //         switch(funct) {
-    //             case '+':
-    //                 result = number1 + number2;
-    //                 console.log(`${number1} + ${number2} = ${result}`)
-    //                 break
-    //             case '-':
-    //                 result = number1 - number2;
-    //                 console.log(`${number1} - ${number2} = ${result}`)
-    //                 break
-    //             case '*':
-    //                 result = number1 * number2
-    //                 console.log(`${number1} * ${number2} = ${result}`)
-    //                 break;
-    //             case '/':
-    //                 result = number1 / number2;
-    //                 console.log(`${number1} / ${number2} = ${result}`)
-    //                 break
-    //         }
-    //     }
-    // }
-
 }
 
 export default new Calculator();
